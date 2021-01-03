@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View, Text } from 'react-native';
 
 import Button from '../../components/Button';
@@ -11,21 +11,17 @@ const options = [
   {key: 'personalizada', label: 'Personalizada'}
 ];
 
-const Welcome = () => {
-  const [modo, setModo] = useState(null);
+const ModoIncubacao = ({ navigation }) => (
+  <Container>
+    <Desc>Selecione o modo de incubação desejada!</Desc>
+    <RadioButton options={options} />
+    <Button 
+      text="Prosseguir"
+      onPress={() => navigation.navigate('ModoFacilPart1')}
+    />
+  </Container>
+);
 
-  return (
-    <Container>
-      <Desc>Selecione o modo de incubação desejada!</Desc>
-      <RadioButton options={options} />
-      <Button 
-        text="Prosseguir"
-        onPress={() => alert('enviar')}
-      />
-    </Container>
-  );
-}
+ModoIncubacao.navigationOptions = { title: "Modos de incubação" };
 
-Welcome.navigationOptions = { title: "Modos de incubação" };
-
-export default Welcome;
+export default ModoIncubacao;
