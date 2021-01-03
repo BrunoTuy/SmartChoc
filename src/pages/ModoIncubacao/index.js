@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { View, Text } from 'react-native';
-import { RadioButton } from 'react-native-paper';
 
-import Button from '../../components/Button'
+import Button from '../../components/Button';
+import RadioButton from '../../components/RadioButton';
 
-import { Container, ContainerRadio, Radio, Title, Desc, Label, Input } from './styles';
+import { Container, Desc } from './styles';
 
 const options = [
   {key: 'facil', label: 'Fácil'},
@@ -17,18 +17,7 @@ const Welcome = () => {
   return (
     <Container>
       <Desc>Selecione o modo de incubação desejada!</Desc>
-      <ContainerRadio>
-        {options.map(i => (
-          <Radio onPress={() => setModo(i.key)}>
-            <RadioButton
-              value={i.key}
-              onPress={() => setModo(i.key)}
-              status={modo === i.key ? 'checked' : 'unchecked'}
-            />
-            <Text>{i.label}</Text>
-          </Radio>
-        ))}
-      </ContainerRadio>
+      <RadioButton options={options} />
       <Button 
         text="Prosseguir"
         onPress={() => alert('enviar')}
