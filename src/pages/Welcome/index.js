@@ -4,7 +4,7 @@ import Button from '../../components/Button'
 
 import { Container, ContainerInput, Title, Desc, Label, Input } from './styles';
 
-const Welcome = () => (
+const Welcome = ({ navigation }) => (
   <Container>
     <Title>Bem Vindo a SmartChoc</Title>
     <Desc>Digite o código que vem na sua chocadeira para fazer a sincronização desejada!</Desc>
@@ -13,7 +13,7 @@ const Welcome = () => (
       <Input placeholder="Digite aqui" />
       <Button 
         text="Ok"
-        onPress={() => alert('enviar')}
+        onPress={() => navigation.navigate("ModoIncubacao")}
       />
     </ContainerInput>
   </Container>
