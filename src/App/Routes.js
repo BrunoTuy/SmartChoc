@@ -6,6 +6,7 @@ import Welcome from '../pages/Welcome';
 import ModoIncubacao from '../pages/ModoIncubacao';
 import ModoFacilPart1 from '../pages/ModoFacilPart1';
 import ModoFacilPart2 from '../pages/ModoFacilPart2';
+import SenhaInterrupcao from '../pages/SenhaInterrupcao';
 
 export default createAppContainer(
   createStackNavigator(
@@ -14,6 +15,7 @@ export default createAppContainer(
       ModoIncubacao,
       ModoFacilPart1,
       ModoFacilPart2,
+      SenhaInterrupcao,
     }, {
       initialRouteName: 'Welcome'
     }

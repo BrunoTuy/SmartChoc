@@ -6,7 +6,7 @@ import RadioButton from '../../components/RadioButton';
 
 import { Container, Desc, Item } from './styles';
 
-const ModoFacil2 = () => (
+const ModoFacil2 = ({ navigation }) => (
   <Container>
     <View>
       <Desc>Ave selecionada: Galinha</Desc>
@@ -20,7 +20,7 @@ const ModoFacil2 = () => (
     <View>
       <Button
         text="Senha"
-        onPress={() => alert('ir senha')}
+        onPress={() => navigation.navigate('SenhaInterrupcao')}
       />
       <Button
         text="Concluir"
