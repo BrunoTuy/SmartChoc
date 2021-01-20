@@ -12,13 +12,13 @@ const options = [
   {key: 'galinhaangola', label: 'Galinha da Angola'}
 ];
 
-const ModoFacil1 = () => (
+const ModoFacil1 = ({ navigation }) => (
   <Container>
     <Desc>Selecione a ave desejada</Desc>
     <RadioButton options={options} />
     <Button 
       text="Prosseguir"
-      onPress={() => alert('enviar')}
+      onPress={() => navigation.navigate('ModoFacilPart2')}
     />
   </Container>
 );
